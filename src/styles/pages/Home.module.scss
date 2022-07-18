@@ -1,6 +1,12 @@
 @import '../variables.scss';
 @import '../mixin.scss';
 
+.bannerWrapper {
+  width: 100%;
+  height: 200px;
+  background-color: rgb(231, 235, 236);
+}
+
 .background {
   position: relative;
   border: 1px solid transparent;
@@ -20,7 +26,7 @@
 
 .mainContent {
   @include basicFlexWrap;
-  width: 860px;
+  width: 920px;
   .latestArticle {
     @include basicFlexWrap;
     width: 100%;
@@ -66,9 +72,7 @@
 }
 
 .rightContent {
-  width: 320px;
-  display: flex;
-  justify-content: center;
-  background-color: white;
+  @include basicFlexWrap;
+  width: 260px;
   border-radius: $BorderRadiusNormal;
 }

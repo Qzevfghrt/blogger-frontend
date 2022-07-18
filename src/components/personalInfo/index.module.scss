@@ -1,9 +1,21 @@
-@import '../../styles/variables.scss';
-@import '../../styles/mixin.scss';
+@import "../../styles/variables.scss";
+@import "../../styles/mixin.scss";
 
 .personalInfoWrapper {
   @include basicFlexWrap;
   width: 280px;
   height: 500px;
-  border: 1px solid red;
+}
+
+.image {
+  border-radius: $BorderRadiusNormal !important;
+}
+
+.name {
+    display: flex;
+    width: 100%;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
 }
