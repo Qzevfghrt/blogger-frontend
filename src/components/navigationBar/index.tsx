@@ -17,7 +17,7 @@ const Navigation: FC = () => {
   return (
     <div className={classNames(styles.navigationWrapper)}>
       <div className={classNames(styles.navigation)}>
-        <div>刘学峰的个人博客</div>
+        <div>刘学峰的个人日志</div>
         <div className={classNames(styles.navigationBar)}>
             {navItems.map((item) => (
               <a href = '#' className={classNames(styles.navigationBtn)}>{item}</a>

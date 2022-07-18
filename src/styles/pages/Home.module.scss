@@ -1,0 +1,74 @@
+@import '../variables.scss';
+@import '../mixin.scss';
+
+.background {
+  position: relative;
+  border: 1px solid transparent;
+  background-color: $BackgroundColor;
+}
+
+.contentWrapper {
+  display: flex;
+  justify-content: space-between;
+  width: 1200px;
+  height: 1000px;
+  border-radius: 12px;
+  margin: 0 auto;
+  margin-top: 20px;
+  background-color: $BackgroundColor;
+}
+
+.mainContent {
+  @include basicFlexWrap;
+  width: 860px;
+  .latestArticle {
+    @include basicFlexWrap;
+    width: 100%;
+    height: 260px;
+    background-color: white;
+    border-radius: $BorderRadiusNormal;
+  }
+  .partition {
+    width: 100%;
+    height: 20px;
+    background-color: $BackgroundColor;
+  }
+  .articleWrapper {
+    @include basicFlexWrap;
+    width: 100%;
+    background-color: white;
+    border-radius: $BorderRadiusNormal;
+    .article {
+      display: flex;
+      width: 800px;
+      height: 44px;
+      line-height: 16px;
+      align-items: center;
+      .date {
+        width: 140px;
+        color: black;
+        font-size: 14px;
+      }
+      .title {
+        font-weight: $FontWeightMedium;
+        flex: 0 0 calc((100% - 140px));
+      }
+    }
+  }
+  .catalogue {
+    display: flex;
+    width: 100%;
+    height: 40px;
+    align-items: center;
+    padding-left: 15px;
+    font-size: 16px;
+  }
+}
+
+.rightContent {
+  width: 320px;
+  display: flex;
+  justify-content: center;
+  background-color: white;
+  border-radius: $BorderRadiusNormal;
+}

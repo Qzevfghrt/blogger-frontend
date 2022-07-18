@@ -1,5 +1,9 @@
+@import '../../styles/variables.scss';
+@import '../../styles/mixin.scss';
+
 .personalInfoWrapper {
-    width: 200px;
-    height: 500px;
-    border: 1px solid red;
+  @include basicFlexWrap;
+  width: 280px;
+  height: 500px;
+  border: 1px solid red;
 }
