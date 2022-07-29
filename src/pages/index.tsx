@@ -5,15 +5,11 @@ import Navigation from "@/src/components/navigationBar";
 import styles from "@/src/styles/pages/Home.module.scss";
 import ArticleCard from "@/src/components/articleCard";
 import PersonalInfo from "@/src/components/personalInfo";
-import Footer from '@/src/components/footer';
+import Footer from "@/src/components/footer";
 
 const Banner = () => {
-  return(
-    <div className={classNames(styles.bannerWrapper)}>
-
-    </div>
-  )
-}
+  return <div className={classNames(styles.bannerWrapper)}></div>;
+};
 
 const Content = () => {
   return (
@@ -26,7 +22,7 @@ const Content = () => {
           </div>
           <div className={classNames(styles.partition)}></div>
           <div className={classNames(styles.articleWrapper)}>
-            <span className={classNames(styles.catalogue)}>近10篇文章</span>
+            <span className={classNames(styles.catalogue)}>近15篇文章</span>
             {/* TODO 数组遍历 */}
             <div className={classNames(styles.article)}>
               <span className={classNames(styles.date)}>
@@ -161,10 +157,10 @@ const Content = () => {
 const Home = () => {
   return (
     <>
-      <Navigation />
+      {/* <Navigation /> */}
       {/* <Banner /> */}
       <Content />
-      <Footer/>
+      {/* <Footer /> */}
     </>
   );
 };

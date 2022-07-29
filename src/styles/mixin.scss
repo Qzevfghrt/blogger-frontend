@@ -6,3 +6,8 @@
   align-content: flex-start;
   justify-content: center;
 }
+
+@mixin linkHover {
+  color: $LinkHoverColor;
+  cursor: pointer;
+}

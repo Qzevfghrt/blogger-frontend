@@ -1,45 +1,48 @@
-@import '../../styles/variables.scss';
+@import "../../styles/variables.scss";
+@import "../../styles//mixin.scss";
 
 .articleCardWrapper {
-    display: flex;
-    flex-wrap: wrap;
-    align-content: flex-start;
-    width: 800px;
-    height: 200px;
-    border-bottom: 1px solid lightgray;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  width: 800px;
+  height: 200px;
+  border-bottom: 1px solid lightgray;
 }
 
 .articleName {
-    display: flex;
-    width: 100%;
-    height: 40px;
-    align-items: center;
-    font-size: 24px;
-    font-weight: $FontWeightHeavy;
+  display: flex;
+  height: 40px;
+  align-items: center;
+  font-size: 24px;
+  font-weight: $FontWeightHeavy;
+  &:hover {
+    @include linkHover;
+  }
 }
 
 .articleTime {
-    display: flex;
-    width: 100%;
-    height: 40px;
-    align-items: center;
-    color: #757575;
-    font-size: 14px;
+  display: flex;
+  width: 100%;
+  height: 40px;
+  align-items: center;
+  color: #757575;
+  font-size: 14px;
 }
 
 .articleBrief {
-    display: flex;
-    width: 100%;
-    height: 80px;
-    font-size: 16px;
-    line-height:26px;
-    color: #1d1d1d;
+  display: flex;
+  width: 100%;
+  height: 80px;
+  font-size: 16px;
+  line-height: 26px;
+  color: #1d1d1d;
 }
 
 .articleCategory {
-    display: flex;
-    width: 100%;
-    height: 40px;
-    align-items: center;
-    color: #aaa;
+  display: flex;
+  width: 100%;
+  height: 40px;
+  align-items: center;
+  color: #aaa;
 }
