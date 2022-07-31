@@ -1,15 +1,9 @@
 import React from "react";
 import classNames from "classnames";
 import dayjs from "dayjs";
-import Navigation from "@/src/components/navigationBar";
 import styles from "@/src/styles/pages/Home.module.scss";
 import ArticleCard from "@/src/components/articleCard";
 import PersonalInfo from "@/src/components/personalInfo";
-import Footer from "@/src/components/footer";
-
-const Banner = () => {
-  return <div className={classNames(styles.bannerWrapper)}></div>;
-};
 
 const Content = () => {
   return (
@@ -157,10 +151,7 @@ const Content = () => {
 const Home = () => {
   return (
     <>
-      {/* <Navigation /> */}
-      {/* <Banner /> */}
       <Content />
-      {/* <Footer /> */}
     </>
   );
 };
