@@ -1,5 +1,13 @@
 @import "./variables.scss";
 
+@mixin content {
+  width: 1200px;
+  border-radius: 12px;
+  margin: 0 auto;
+  margin-top: 20px;
+  background-color: $BackgroundColor;
+}
+
 @mixin basicFlexWrap {
   display: flex;
   flex-wrap: wrap;
@@ -11,3 +19,5 @@
   color: $LinkHoverColor;
   cursor: pointer;
 }
+
+

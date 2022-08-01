@@ -1,12 +1,6 @@
 @import '../variables.scss';
 @import '../mixin.scss';
 
-.bannerWrapper {
-  width: 100%;
-  height: 200px;
-  background-color: rgb(231, 235, 236);
-}
-
 .background {
   position: relative;
   border: 1px solid transparent;
@@ -14,13 +8,9 @@
 }
 
 .contentWrapper {
+  @include content;
   display: flex;
   justify-content: space-between;
-  width: 1200px;
-  border-radius: 12px;
-  margin: 0 auto;
-  margin-top: 20px;
-  background-color: $BackgroundColor;
 }
 
 .mainContent {

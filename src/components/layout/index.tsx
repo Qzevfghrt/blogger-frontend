@@ -12,6 +12,7 @@ export interface LayoutProps {
 const Layout: FC<LayoutProps> = ({ children }: LayoutProps) => {
   return (
     <>
+      <DefaultSeo  title='刘学峰的个人日志'/>
       <NavigationBar />
       <main className={classNames(styles.contentWrapper)}>{children}</main>
       <Footer />

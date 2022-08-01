@@ -1,27 +1,33 @@
 import React from "react";
-import { GetServerSideProps, NextPage } from "next";
-import axios from "axios";
+import { GetStaticProps, NextPage } from "next";
 import ReactMarkdown from "react-markdown";
-import about from '@/public/about.md'
+import classNames from "classnames";
+import rehypeRaw from 'rehype-raw';
+import fs from "fs";
+import styles from '@/src/styles/pages/About.module.scss'
 
-export const getServerSideProps: GetServerSideProps = async () => {
-  const res = await axios.get("http://localhost:8888/articles");
+export const getStaticProps: GetStaticProps = () => {
+  const file = fs
+    .readFileSync(`${process.cwd()}/src/content/about.md`)
+    .toString();
   return {
     props: {
-      articles: res.data,
+      about: file,
     },
   };
 };
 
 export type Pageprops = {
-  articles: any;
+  about: any;
 };
-const About: NextPage<Pageprops> = ({ articles }) => {
-  const value = articles[0]?.content;
+
+const About: NextPage<Pageprops> = ({ about }) => {
   return (
-    <>
-      <ReactMarkdown>{value}</ReactMarkdown>
-    </>
+    <div className={classNames(styles.background)}>
+      <div className={classNames(styles.contentWrapper)}>
+        <ReactMarkdown rehypePlugins={[rehypeRaw]}>{about}</ReactMarkdown>
+      </div>
+    </div>
   );
 };
 

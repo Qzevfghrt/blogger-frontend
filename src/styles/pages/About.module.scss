@@ -1,0 +1,15 @@
+@import '../variables.scss';
+@import '../mixin.scss';
+
+.background {
+    position: relative;
+    border: 1px solid transparent;
+    background-color: $BackgroundColor;
+    min-height: $min-height;
+  }
+
+.contentWrapper {
+    @include content;
+    padding: 0 10px;
+    background-color: white;
+}
